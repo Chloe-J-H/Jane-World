@@ -5,32 +5,57 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
   <style>
-    
-      </style>
+    h1 {color: rgb(0, 58, 22)}
+   
+ </style>
 </head>
 <body style="background-color:rgb(195, 221, 245);">
     <h1>Jamaicans For Environmental Change</h1>
-        <button type="button" onclick="alert('Hello world!')">GET FI KNOW JAMAICAN BUSH</button>
+        <button type="button" onclick="alert('Hello world!')">GET FI KNOW JAMAICA</button>
         <button type="button" onclick="alert('Hello world!')">ABOUT US</button>
         <button type="button" onclick="alert('Hello world!')">DONATE</button>
         <button type="button" onclick="alert('Hello world!')">VOLUNTEER</button>
-    
+
+        <script>document.write('<h1>' + greeting + '</h1>')
+        </script>
+              
      <p>
       Jamaica may be little but we are rich in biodiversity ranking 5th globally for endemic species. 
       As we experience the crippling effects of climate change we need YOU to become an active member of the Jamaican's environmental change program.
       Please volunteer or donate to the cause. 
      </p>
-       <img src="Jamaica - Map.JPG" width="650" height="250" alt="Jamaican Map">
+      <img src="Jamaica - Map.JPG" width="650" height="250" alt="Jamaican Map"
+      usemap="#Jamaican Map">
+
+      <map name="Jamaican Map">
+      <area shape="rect" coords="0,0,82,126" alt="Cockpit Country" href="beautiful-cockpit-country-1024x600.jpg">
+      <area shape="rect" coords="90,58,3" alt="Green Grotto Caves" href="green grotto caves.JPG">
+      <area shape="rect" coords="124,58,8" alt="Cockpit Country" href="beautiful-cockpit-country-1024x600.jpg">
+     
+    </map>
 
     <h2>Upcoming Events</h2> 
       <p>
         <table style="width:35%">
           <tr>
-          
             <th>Date</th>
             <th>Event</th> 
-            <th></th>
-          </tr>
+            <th>
+              <button onclick="myFunction()">Sign up for an Event</button>
+                <p id="volunteer"></p>
+                <script>
+                   function myFunction() {
+                   var txt;
+                   var person = prompt("Thank you for your consideration. Please enter your email here:", "JohnBrown@email.com");
+                   if (person == null || person == "") {
+                   txt = "User cancelled the prompt.";
+                    } else {
+                    txt = "Hello " + person + "! How are you today?";
+                    }
+                    document.getElementById("demo").innerHTML = txt;
+                    }
+                    </script>
+             </tr>
           <tr>
             <td>November 31, 2020</td>
             <td>Beach Clean-Up</td>
